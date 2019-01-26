@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33916832093919590}
   - component: {fileID: 23737070776309630}
   - component: {fileID: 65247872227243966}
+  - component: {fileID: 114343663177890856}
   m_Layer: 0
   m_Name: Door4
   m_TagString: Untagged
@@ -40,6 +41,7 @@ GameObject:
   - component: {fileID: 33625494419477756}
   - component: {fileID: 135642885132885676}
   - component: {fileID: 23186957865866000}
+  - component: {fileID: 114104833725493590}
   m_Layer: 10
   m_Name: nobu
   m_TagString: Untagged
@@ -67,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1332675457859836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.6, y: 3.65095, z: 2.0964904}
+  m_LocalPosition: {x: -2.94, y: 3.65095, z: 2.0964904}
   m_LocalScale: {x: 5, y: 10, z: 0.5}
   m_Children:
   - {fileID: 4129997434772372}
@@ -168,6 +170,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114104833725493590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1939834016538932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26faaaf45527e47adb0f74e1be5519de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114343663177890856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1332675457859836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26faaaf45527e47adb0f74e1be5519de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135642885132885676
 SphereCollider:
   m_ObjectHideFlags: 1
