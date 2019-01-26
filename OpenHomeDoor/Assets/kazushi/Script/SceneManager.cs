@@ -27,7 +27,9 @@ public class SceneManager : MonoBehaviour
 
         if (Physics.Raycast(MouseRay, out hit, Mathf.Infinity, LayerMaskOfDoor))  //outでオブジェクトの情報を得る。
         {
+            Debug.DrawRay(MouseRay.origin, MouseRay.direction, Color.red,100.0f);
             hit.collider.GetComponent<ParentDoor>().Doors();
+            Debug.Log(hit.collider.GetComponent<ParentDoor>());
                 /*
             if (hit.collider.name == "Door1" && Input.GetKeyDown("A"))
             {

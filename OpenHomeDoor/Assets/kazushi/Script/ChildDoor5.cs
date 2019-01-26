@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChildDoor5 : ParentDoor {
+public class ChildDoor5 : ParentDoor{
 
 	
 

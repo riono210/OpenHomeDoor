@@ -11,6 +11,7 @@ public class ChildDoor1 : ParentDoor {
             GameObject Parent = transform.root.gameObject;
             Destroy(Parent);
             Debug.Log("Open");
+
         }
     }
 
