@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/riono/Test.unity
+    guid: 8e825831baef65040b1a1df5814a194a
+  - enabled: 1
+    path: Assets/HoloToolkit-Examples/SpatialMapping/Scenes/SpatialProcessing.unity
+    guid: b7bd1052e811d44438fa58055dc800de
