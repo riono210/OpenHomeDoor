@@ -1,21 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneManager : MonoBehaviour
 {
     //private Door Door;
+    [SerializeField] private int HowManyDoors;
+    public int CountDoor;
     private ParentDoor ParentDoor;
+    private bool Opend;
+   
     public LayerMask LayerMaskOfDoor;
+    public GameObject Door1Prefab;
+    public GameObject Door2Prefab;
+    public GameObject Door3Prefab;
+    public GameObject Door4Prefab;
+    public GameObject Door5Prefab;
+    public GameObject Door6Prefab;
+
 
     void Start()
     {
-        //Door = GameObject.Find("Door").GetComponent<Door>();
+        CountDoor = 0;
         ParentDoor = GetComponent<ParentDoor>();
     }
 
     void Update()
     {
+        if(CountDoor == HowManyDoors){
+            
+        }
+        else if(Opend){
+            SpownDoor();
+        }
         OpenDoor();
     }
 
@@ -29,51 +47,44 @@ public class SceneManager : MonoBehaviour
         {
             Debug.DrawRay(MouseRay.origin, MouseRay.direction, Color.red,100.0f);
             hit.collider.GetComponent<ParentDoor>().Doors();
-            Debug.Log(hit.collider.GetComponent<ParentDoor>());
-                /*
-            if (hit.collider.name == "Door1" && Input.GetKeyDown("A"))
-            {
-                ParentDoor.DestroyDoor();
-                Debug.Log("Open");
-            }
-            else if (hit.collider.name == "Door2" && Input.GetKeyDown("S"))
-            {
-                ParentDoor.DestroyDoor();
-            }
-            else if (hit.collider.name == "Door3" && Input.GetKeyDown("D"))
-            {
-                ParentDoor.DestroyDoor();
-            }
-            else if (hit.collider.name == "Door4" && Input.GetKeyDown("F"))
-            {
-                ParentDoor.DestroyDoor();
-            }
-            else if (hit.collider.name == "Door5" && Input.GetKeyDown("G"))
-            {
-                ParentDoor.DestroyDoor();
-            }
-            else if (hit.collider.name == "Door6" && Input.GetKeyDown("H"))
-            {
-                ParentDoor.DestroyDoor();
-            }
-*/
 
-            //ParentDoor.Doors();
-            //Debug.Log("hit");
-            //ClickDoor();
+            CountDoor++;
+            Opend = true;
         }
     }
 
-    private void ClickDoor()
-    {
+    public void SpownDoor(){
 
-        if (Input.GetMouseButtonDown(0))
+        int rand = (int)Random.Range(1, 6);
+        switch (rand)
         {
-            Debug.Log("Open");
+            case 1:
+                Instantiate(Door1Prefab);
+                break;
+            case 2:
+                Instantiate(Door2Prefab);
+                break;
+            case 3:
+                Instantiate(Door3Prefab);
+                break;
+            case 4:
+                Instantiate(Door4Prefab);
+                break;
+            case 5:
+                Instantiate(Door5Prefab);
+                break;
+            case 6:
+                Instantiate(Door6Prefab);
+                break;
         }
+        Opend = false;
     }
-        //Debug.DrawRay(MouseRay.origin, MouseRay.direction, Color.red);
 }
+
+    
+
+
+
 
 
 

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ChildDoor1 : ParentDoor {
 
+    private void Start()
+    {
+        base.Start();
+    }
+
     public override void Doors()
     {
         if (Input.GetKeyDown("a")){  //キーは小文字のみ
