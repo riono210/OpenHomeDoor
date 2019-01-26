@@ -34,6 +34,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-OpenHomeDoor/Assets/HoloToolkit/
 OpenHomeDoor/App/
+
+OpenHomeDoor/Assets/HoloToolkit/
 OpenHomeDoor/Assets/HoloToolkit-Examples/

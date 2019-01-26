@@ -18,6 +18,7 @@ public class FloorRecognize : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+#if UNITY_EDITOR && UNITY_STANDALONE_WIN
         bool hit = Physics.Raycast(GazeManager.Instance.GazeOrigin,
             GazeManager.Instance.GazeNormal, out hitInfo, 20f, SpatialMappingManager.Instance.LayerMask);
 
@@ -50,5 +51,6 @@ public class FloorRecognize : MonoBehaviour {
                 }
             }
         }
+#endif
     }
 }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 [System.Serializable]
 public class NotificationObject<T> {
+    // ex: bool hoge = new  NotificationObject<bool>(true);
+
+
     // 使っていない
     public delegate void NotificationAction (T t);
 
