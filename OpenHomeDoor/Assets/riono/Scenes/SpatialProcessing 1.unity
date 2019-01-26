@@ -501,6 +501,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1476242074
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4204356935118174, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204356935118174, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204356935118174, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204356935118174, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204356935118174, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204356935118174, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204356935118174, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4204356935118174, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1157135817319292, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1511235742
 Prefab:
   m_ObjectHideFlags: 0
@@ -688,7 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5af54c955cdcb345b6ea012b864a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 1481448766761848, guid: 49263378ca136c74bb7b4305b8cd4ea9, type: 2}
+  door: {fileID: 1157135817319292, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
   camera: {fileID: 954495630}
   floorParent: {fileID: 489613014}
 --- !u!4 &2116818304
