@@ -9,7 +9,7 @@ public class SceneManager : MonoBehaviour
     [SerializeField] private int HowManyDoors;
     public int CountDoor;
     private ParentDoor ParentDoor;
-    private bool Opend;
+    public bool Opend;
    
     public LayerMask LayerMaskOfDoor;
     public GameObject Door1Prefab;
@@ -24,6 +24,8 @@ public class SceneManager : MonoBehaviour
     {
         CountDoor = 0;
         ParentDoor = GetComponent<ParentDoor>();
+        MagicScript.Instance.Camera = this.gameObject;
+        Debug.Log(this.gameObject);
     }
 
     void Update()
@@ -48,8 +50,6 @@ public class SceneManager : MonoBehaviour
             Debug.DrawRay(MouseRay.origin, MouseRay.direction, Color.red,100.0f);
             hit.collider.GetComponent<ParentDoor>().Doors();
 
-            CountDoor++;
-            Opend = true;
         }
     }
 

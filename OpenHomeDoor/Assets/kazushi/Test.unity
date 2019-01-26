@@ -278,9 +278,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15019a82a7643476bb324f7b6b238d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HowManyDoors: 20
+  CountDoor: 0
   LayerMaskOfDoor:
     serializedVersion: 2
     m_Bits: 1024
+  Door1Prefab: {fileID: 1497356271214816, guid: aedf2a8471eb54262b003ac9b8edd676,
+    type: 2}
+  Door2Prefab: {fileID: 1812237550524416, guid: e142bdbb8abb14fd09c08985463e493f,
+    type: 2}
+  Door3Prefab: {fileID: 1175240724787236, guid: edc856a8e3ab545169a3791cacf68010,
+    type: 2}
+  Door4Prefab: {fileID: 1332675457859836, guid: 45dfda71d5dfe4f76a8a3f5848e7a4eb,
+    type: 2}
+  Door5Prefab: {fileID: 1512180520847792, guid: 86959a68758d94a409b4ff70e7305c94,
+    type: 2}
+  Door6Prefab: {fileID: 1490805397579626, guid: b851c09ab5000400786f9f833beb021f,
+    type: 2}
 --- !u!114 &299577508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +369,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b075c7031666748d5b5405bb24bba045, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &668981154
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 668981155}
+  m_Layer: 0
+  m_Name: ScManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &668981155
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 668981154}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.0733724, y: 3.738001, z: -1.3973656}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &697863829
 GameObject:
   m_ObjectHideFlags: 0
