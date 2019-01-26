@@ -243,6 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953053226}
   - component: {fileID: 953053227}
+  - component: {fileID: 953053228}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -276,6 +277,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeNum: 0
   once: 1
+--- !u!114 &953053228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 953053225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0440599decd204357a68e56fc7975563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 2009304073}
 --- !u!1 &954495630 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1850730992894404, guid: d29bc40b7f3df26479d6a0aac211c355,
@@ -707,6 +720,106 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d29bc40b7f3df26479d6a0aac211c355, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2009304073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2009304074}
+  - component: {fileID: 2009304075}
+  - component: {fileID: 2009304076}
+  - component: {fileID: 2009304077}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2009304074
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009304073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.173388, y: 3.1888766, z: 0.6613331}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2009304075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009304073}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15019a82a7643476bb324f7b6b238d01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HowManyDoors: 20
+  CountDoor: 0
+  Opend: 0
+  LayerMaskOfDoor:
+    serializedVersion: 2
+    m_Bits: 1024
+  Door1Prefab: {fileID: 1497356271214816, guid: aedf2a8471eb54262b003ac9b8edd676,
+    type: 2}
+  Door2Prefab: {fileID: 1812237550524416, guid: e142bdbb8abb14fd09c08985463e493f,
+    type: 2}
+  Door3Prefab: {fileID: 1175240724787236, guid: edc856a8e3ab545169a3791cacf68010,
+    type: 2}
+  Door4Prefab: {fileID: 1332675457859836, guid: 45dfda71d5dfe4f76a8a3f5848e7a4eb,
+    type: 2}
+  Door5Prefab: {fileID: 1512180520847792, guid: 86959a68758d94a409b4ff70e7305c94,
+    type: 2}
+  Door6Prefab: {fileID: 1490805397579626, guid: b851c09ab5000400786f9f833beb021f,
+    type: 2}
+--- !u!114 &2009304076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009304073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974e273cd6ecc4fb5bb7c4f255e2a2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2009304077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2009304073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3579dfb1f42447c41b05e172ed306a4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HowManyDoors: 20
+  CountDoor: 0
+  Opend: 0
+  LayerMaskOfDoor:
+    serializedVersion: 2
+    m_Bits: 1024
+  Door1Prefab: {fileID: 1497356271214816, guid: aedf2a8471eb54262b003ac9b8edd676,
+    type: 2}
+  Door2Prefab: {fileID: 1812237550524416, guid: e142bdbb8abb14fd09c08985463e493f,
+    type: 2}
+  Door3Prefab: {fileID: 1175240724787236, guid: edc856a8e3ab545169a3791cacf68010,
+    type: 2}
+  Door4Prefab: {fileID: 1332675457859836, guid: 45dfda71d5dfe4f76a8a3f5848e7a4eb,
+    type: 2}
+  Door5Prefab: {fileID: 1512180520847792, guid: 86959a68758d94a409b4ff70e7305c94,
+    type: 2}
+  Door6Prefab: {fileID: 1490805397579626, guid: b851c09ab5000400786f9f833beb021f,
+    type: 2}
 --- !u!1 &2116818302
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +830,7 @@ GameObject:
   - component: {fileID: 2116818304}
   - component: {fileID: 2116818303}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: DoorOnFloor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -734,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5af54c955cdcb345b6ea012b864a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 1157135817319292, guid: c6fb68fa91b9cb543a073a1850039163, type: 2}
+  door: {fileID: 1497356271214816, guid: aedf2a8471eb54262b003ac9b8edd676, type: 2}
   camera: {fileID: 954495630}
   floorParent: {fileID: 489613014}
 --- !u!4 &2116818304

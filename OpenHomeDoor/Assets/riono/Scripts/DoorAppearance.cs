@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class DoorAppearance : MonoBehaviour {
 
-    public GameObject door;
-    public GameObject camera;
-    public GameObject floorParent;
+    public GameObject door;  // 床の上に出現させるdoor
+    public GameObject camera;  // ホロレンズ
+    public GameObject floorParent;   // floorが入る
 
     private void Awake()
     {
@@ -33,6 +33,7 @@ public class DoorAppearance : MonoBehaviour {
 
         float doorSizeY = door.transform.localScale.y  / 2;
         var planes = floorParent.GetComponentInChildren<Transform>();
+        // typeがfloorのものを探し、高さを取得
         foreach(Transform value in planes)
         {
 
@@ -48,6 +49,7 @@ public class DoorAppearance : MonoBehaviour {
             }
         }
         doorPos = new Vector3(doorPos.x, floorPos.y + doorSizeY  , doorPos.z + 1f);
+        // doorの生成
         Instantiate(door,doorPos, Quaternion.identity);
     }
 }
