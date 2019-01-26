@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using HoloToolkit;
-using HoloToolkit.Unity.InputModule;
-using HoloToolkit.Unity.SpatialMapping;
+//using HoloToolkit;
+//using HoloToolkit.Unity.InputModule;
+//using HoloToolkit.Unity.SpatialMapping;
 
 public class FloorRecognize : MonoBehaviour {
 
