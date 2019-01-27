@@ -11,6 +11,9 @@ public class resultScore : MonoBehaviour {
     private countTime countTimeScript;
     private OparateManager oparateManagerScript;
 
+    public GameObject ClearCanvas;
+    public GameObject gameOverCanvas;
+
 	// Use this for initialization
 	void Start () {
         Timer = GameObject.Find("Timer");
@@ -20,9 +23,14 @@ public class resultScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         ClearTime = (int)countTimeScript.newseconds;
-        if (isGameover == false && isClear == true)
+        if (isClear == true)
         {
-                    
+            Instantiate(ClearCanvas);
+        }
+
+        else if(isGameover == true)
+        {
+            Instantiate(gameOverCanvas); 
         }
 	}
 }
