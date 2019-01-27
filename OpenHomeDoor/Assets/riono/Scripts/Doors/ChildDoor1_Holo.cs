@@ -34,7 +34,7 @@ Vector3 OriginalParentPos;
 
         float x = Mathf.Clamp(transform.position.x,OriginalPos.x,OriginalPos.x+10.0f);
         transform.position = new Vector3(x, OriginalPos.y, OriginalPos.z);
-        if(OriginalPos.x-transform.position.x<-1.0f){
+        if(OriginalPos.x-transform.position.x<-0.3f){
             
             Destroy(this.gameObject);
             MagicScript.Instance.Camera.GetComponent<OparateManager_Holo>().CountDoor += 1;
