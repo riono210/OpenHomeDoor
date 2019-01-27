@@ -35,7 +35,7 @@ public class ChildDoor3_Holo : ParentDoor {
 
         float y = Mathf.Clamp(transform.position.y, OriginalPos.y, OriginalPos.y + 10.0f);
         transform.position = new Vector3(OriginalPos.x, y, OriginalPos.z);
-        if (OriginalPos.y - transform.position.y < -1.0f)
+        if (OriginalPos.y - transform.position.y < -0.3f)
         {
             
             Destroy(this.gameObject);
