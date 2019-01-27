@@ -7,16 +7,18 @@ public class ManagerSinglton : SingletonMonoBehaviour<ManagerSinglton>
     public int planeNum;
     public NotificationObject<bool> doorExist;
 
+    public bool once = true;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+       
+
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+    }
 
     protected override void Awake()
     {

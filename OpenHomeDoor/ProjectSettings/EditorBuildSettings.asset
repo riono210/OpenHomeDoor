@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Koo/Scene/Title.unity
     guid: d53f19a18e4334afea938b78cb2e9e00
   - enabled: 0
@@ -14,9 +14,15 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Koo/Scene/Howto.unity
     guid: 7837373e93d564a868b11a6e9d1171c7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Koo/Scene/TestUI.unity
     guid: 20d66d6b28dac40418dce8134e94a8aa
+  - enabled: 1
+    path: Assets/riono/Scenes/TitleTest.unity
+    guid: a5dd8892c91587f46bf8a66bda30c3fd
+  - enabled: 1
+    path: Assets/riono/Scenes/SpatialProcessing 1.unity
+    guid: b208af0e500c92f4eabdcfa051adfd4c
