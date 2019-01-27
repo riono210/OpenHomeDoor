@@ -10,6 +10,7 @@ public class resultScore : MonoBehaviour {
     private GameObject Timer;
     private countTime countTimeScript;
     private OparateManager oparateManagerScript;
+    public  GameObject MainCamera;
 
     public GameObject ClearCanvas;
     public GameObject gameOverCanvas;
@@ -18,11 +19,19 @@ public class resultScore : MonoBehaviour {
 	void Start () {
         Timer = GameObject.Find("Timer");
         countTimeScript = Timer.GetComponent<countTime>();
+
+        MainCamera = GameObject.Find("MainCamera");
+        oparateManagerScript = MainCamera.GetComponent<OparateManager>();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
+        
+        isClear = oparateManagerScript.GameClear;
         ClearTime = (int)countTimeScript.newseconds;
+        isGameover = countTimeScript.gameover;
+
         if (isClear == true)
         {
             Instantiate(ClearCanvas);

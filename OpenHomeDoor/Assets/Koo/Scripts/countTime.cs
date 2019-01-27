@@ -9,9 +9,9 @@ public class countTime : MonoBehaviour
     [SerializeField]public float newseconds=30.0f;
     private float oldseconds;
 
-    private bool gameover = false;
+    public bool gameover = false;
     bool clear = false;
-    private bool startFlag = false;
+
 
     private Text timerText;
     private AudioSource sound01;
@@ -25,14 +25,10 @@ public class countTime : MonoBehaviour
 	
 
 	// Update is called once per frame
-	void Update () 
+	void Update ()
     {
-        if (Input.GetKeyDown("s"))
-        {
-            startFlag = true;
-        }
 
-        if (startFlag == true && clear != true)
+        if (clear != true)
         {
             TimeManager();
         }
