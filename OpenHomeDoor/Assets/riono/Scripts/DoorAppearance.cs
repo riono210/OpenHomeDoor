@@ -48,7 +48,7 @@ public class DoorAppearance : MonoBehaviour {
                 break;
             }
         }
-        doorPos = new Vector3(doorPos.x, floorPos.y + doorSizeY  , doorPos.z + 1f);
+        doorPos = new Vector3(doorPos.x, floorPos.y + doorSizeY  , doorPos.z + 2f);
         // doorの生成
         Instantiate(door,doorPos, Quaternion.identity);
     }
