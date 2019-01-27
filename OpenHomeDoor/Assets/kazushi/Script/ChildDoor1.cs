@@ -6,14 +6,18 @@ public class ChildDoor1 : ParentDoor {
 
     Vector3 OriginalPos;
 
-    public float PluseXAxis;
+    //public float PluseXAxis;
 
     private void Start()
     {
         OriginalPos = transform.position;
         Debug.Log(OriginalPos);
     }
-
+    private void Update()
+    {
+        MoveNobu();
+        //Vector3 Uncheged2 = MagicScript.Instance.Camera.GetComponent<OparateManager>().UnChenged;
+    }
     public override void Doors()
     {
         MoveNobu();
@@ -28,7 +32,8 @@ public class ChildDoor1 : ParentDoor {
         //float z = Mathf.Clamp(OriginalPos.z, OriginalPos.z, OriginalPos.z);
         //float x = Mathf.Clamp(OriginalPos.x, OriginalPos.x, OriginalPos.x + 10.0f);
 
-        transform.position = new Vector3(transform.position.x, OriginalPos.y, OriginalPos.z);
+        float x = Mathf.Clamp(transform.position.x,OriginalPos.x,OriginalPos.x+10.0f);
+        transform.position = new Vector3(x, OriginalPos.y, OriginalPos.z);
         if(OriginalPos.x-transform.position.x<-1.0f){
             
             Destroy(this.gameObject);
