@@ -36,5 +36,4 @@ sysinfo.txt
 *.unitypackage
 OpenHomeDoor/App/
 
-OpenHomeDoor/Assets/HoloToolkit/
 OpenHomeDoor/Assets/HoloToolkit-Examples/
