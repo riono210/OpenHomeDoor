@@ -20,7 +20,7 @@ Vector3 OriginalParentPos;
     }
     public override void Doors()
     {
-        MoveNobu();
+        //MoveNobu();
         Debug.Log(OriginalPos);
     }
 
