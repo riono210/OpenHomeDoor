@@ -19,7 +19,7 @@ public class ChildDoor5_Holo : ParentDoor{
     }
     public override void Doors()
     {
-        MoveNobu();
+        //MoveNobu();
         Debug.Log(OriginalPos);
     }
 

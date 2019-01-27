@@ -56,7 +56,7 @@ public class OparateManager_Holo: MonoBehaviour
         //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         GameObject hitObj = GazeManager.Instance.HitObject;
         RaycastHit hit = GazeManager.Instance.HitInfo;
-        Debug.Log("name:" + hitObj.name);
+        //Debug.Log("name:" + hitObj.name);
         if (hitObj != null && hitObj.name == "door_handle 1")  //outでオブジェクトの情報を得る。
         {
             //Debug.DrawRay(MouseRay.origin, MouseRay.direction, Color.red,100.0f);
@@ -72,23 +72,23 @@ public class OparateManager_Holo: MonoBehaviour
         switch (rand)
         {
             case 1:
-                Instantiate(Door1Prefab,doorPos, Quaternion.identity);
+                Instantiate(Door1Prefab,doorPos, Quaternion.Euler(0,-90,0));
                 //UnChenged = Door1Prefab.transform.position;
                 break;
             case 2:
-                Instantiate(Door2Prefab,doorPos, Quaternion.identity);
+                Instantiate(Door2Prefab,doorPos, Quaternion.Euler(0,-90,0));
                 break;
             case 3:
-                Instantiate(Door3Prefab,doorPos, Quaternion.identity);
+                Instantiate(Door3Prefab,doorPos, Quaternion.Euler(0,-90,0));
                 break;
             case 4:
-                Instantiate(Door4Prefab,doorPos, Quaternion.identity);
+                Instantiate(Door4Prefab,doorPos, Quaternion.Euler(0,-90,0));
                 break;
             case 5:
-                Instantiate(Door5Prefab,doorPos, Quaternion.identity);
+                Instantiate(Door5Prefab,doorPos, Quaternion.Euler(0,-90,0));
                 break;
             case 6:
-                Instantiate(Door6Prefab,doorPos, Quaternion.identity);
+                Instantiate(Door6Prefab,doorPos, Quaternion.Euler(0,-90,0));
                 break;
         }
         Opend = false;
