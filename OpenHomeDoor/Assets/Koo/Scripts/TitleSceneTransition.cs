@@ -15,9 +15,6 @@ public class TitleSceneTransition : MonoBehaviour
 
     public void OnClick(int number)
     {
-
-        decideSound.PlayOneShot(decideSound.clip);
-
         {
             switch (number)
             {
@@ -47,4 +44,6 @@ public class TitleSceneTransition : MonoBehaviour
     {
         SceneManager.LoadScene("TestUI");
     }
+
+
 }
