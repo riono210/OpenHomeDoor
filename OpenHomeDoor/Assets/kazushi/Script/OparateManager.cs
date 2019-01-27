@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class OparateManager: MonoBehaviour
 {
     //private Door Door;
+    //public  Vector3 UnChenged;
     [SerializeField] private int HowManyDoors;
     public int CountDoor;
     private ParentDoor ParentDoor;
@@ -22,14 +23,17 @@ public class OparateManager: MonoBehaviour
 
     void Start()
     {
+        //UnChenged = new Vector3(0, 0, 0);
         CountDoor = 0;
         ParentDoor = GetComponent<ParentDoor>();
         MagicScript.Instance.Camera = this.gameObject;
         Debug.Log(this.gameObject);
+        Opend = true;
     }
 
     void Update()
     {
+        
         if(CountDoor == HowManyDoors){
             
         }
@@ -60,6 +64,7 @@ public class OparateManager: MonoBehaviour
         {
             case 1:
                 Instantiate(Door1Prefab);
+                //UnChenged = Door1Prefab.transform.position;
                 break;
             case 2:
                 Instantiate(Door2Prefab);
