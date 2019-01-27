@@ -49,6 +49,7 @@ public class DoorAppearance : MonoBehaviour {
             }
         }
         doorPos = new Vector3(doorPos.x, floorPos.y + doorSizeY  , doorPos.z + 2f);
+        ManagerSinglton.Instance.doorPos = doorPos;
         // doorの生成
         Instantiate(door,doorPos, Quaternion.identity);
     }
