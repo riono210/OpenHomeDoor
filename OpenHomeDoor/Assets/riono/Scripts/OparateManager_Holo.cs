@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -48,12 +49,18 @@ public class OparateManager_Holo: MonoBehaviour
     public void OpenDoor()
     {
 
-        Ray MouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;  //ヒットしたオブジェクトの情報を格納する。
+        // Ray MouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        // RaycastHit hit;  //ヒットしたオブジェクトの情報を格納する。
 
-        if (Physics.Raycast(MouseRay, out hit, Mathf.Infinity, LayerMaskOfDoor))  //outでオブジェクトの情報を得る。
+        // rayの設定
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        GameObject hitObj = GazeManager.Instance.HitObject;
+        RaycastHit hit = GazeManager.Instance.HitInfo;
+        Debug.Log("name:" + hitObj.name);
+        if (hitObj != null && hitObj.name == "door_handle 1")  //outでオブジェクトの情報を得る。
         {
-            Debug.DrawRay(MouseRay.origin, MouseRay.direction, Color.red,100.0f);
+            //Debug.DrawRay(MouseRay.origin, MouseRay.direction, Color.red,100.0f);
+            Debug.Log("hit");
             hit.collider.GetComponent<ParentDoor>().Doors();
 
         }
