@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class countTime : MonoBehaviour 
 {
 
-    [SerializeField]private float newseconds=30.0f;
+    [SerializeField]public float newseconds=30.0f;
     private float oldseconds;
 
     private bool gameover = false;
@@ -32,7 +32,7 @@ public class countTime : MonoBehaviour
             startFlag = true;
         }
 
-        if (startFlag == true)
+        if (startFlag == true && clear != true)
         {
             TimeManager();
         }
