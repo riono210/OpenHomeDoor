@@ -6,10 +6,7 @@ public class ParentDoor : MonoBehaviour {
 
     //private SceneManager SceneManager;
 
-    public virtual void Start()
-    {
-        
-    }
+
     public virtual void Doors(){
 
     }

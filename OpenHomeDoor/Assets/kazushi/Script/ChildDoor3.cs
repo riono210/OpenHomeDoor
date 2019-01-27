@@ -8,8 +8,8 @@ public class ChildDoor3 : ParentDoor {
     {
         if (Input.GetKeyDown("d")){  //キーは小文字のみ
 
-            GameObject Parent = transform.root.gameObject;
-            Destroy(Parent);
+            //GameObject Parent = transform.root.gameObject;
+            Destroy(this.gameObject);
             MagicScript.Instance.Camera.GetComponent<OparateManager>().CountDoor += 1;
             MagicScript.Instance.Camera.GetComponent<OparateManager>().Opend = true;
 
