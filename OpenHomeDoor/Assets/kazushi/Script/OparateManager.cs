@@ -11,6 +11,7 @@ public class OparateManager: MonoBehaviour
     public int CountDoor;
     private ParentDoor ParentDoor;
     public bool Opend;
+    public bool GameClear;
    
     public LayerMask LayerMaskOfDoor;
     public GameObject Door1Prefab;
@@ -29,19 +30,23 @@ public class OparateManager: MonoBehaviour
         MagicScript.Instance.Camera = this.gameObject;
         Debug.Log(this.gameObject);
         Opend = true;
+        GameClear = false;
     }
 
     void Update()
     {
         
         if(CountDoor == HowManyDoors){
-            
+
+            GameClear = true;
+
         }
         else if(Opend){
             SpownDoor();
         }
         OpenDoor();
     }
+
 
     public void OpenDoor()
     {
