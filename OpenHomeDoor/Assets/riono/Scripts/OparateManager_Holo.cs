@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using HoloToolkit.Unity.InputModule;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class OparateManager_Holo: MonoBehaviour
 {
     //private Door Door;
+    //public  Vector3 UnChenged;
     [SerializeField] private int HowManyDoors;
     public int CountDoor;
     private ParentDoor ParentDoor;
@@ -21,16 +21,21 @@ public class OparateManager_Holo: MonoBehaviour
     public GameObject Door6Prefab;
 
 
+    private Vector3 doorPos;
+
     void Start()
     {
+        //UnChenged = new Vector3(0, 0, 0);
         CountDoor = 0;
         ParentDoor = GetComponent<ParentDoor>();
         MagicScript.Instance.Camera = this.gameObject;
         Debug.Log(this.gameObject);
+        //Opend = true;
     }
 
     void Update()
     {
+        
         if(CountDoor == HowManyDoors){
             
         }
@@ -40,54 +45,43 @@ public class OparateManager_Holo: MonoBehaviour
         OpenDoor();
     }
 
-
-    // rayを飛ばす
     public void OpenDoor()
     {
 
-        // Ray MouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        // RaycastHit hit;  //ヒットしたオブジェクトの情報を格納する。
+        Ray MouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;  //ヒットしたオブジェクトの情報を格納する。
 
-        // if (Physics.Raycast(MouseRay, out hit, Mathf.Infinity, LayerMaskOfDoor))  //outでオブジェクトの情報を得る。
-        // {
-        //     Debug.DrawRay(MouseRay.origin, MouseRay.direction, Color.red,100.0f);
-        //     hit.collider.GetComponent<ParentDoor>().Doors();
-
-        // }
-
-        RaycastHit hit = GazeManager.Instance.HitInfo;
-        GameObject hitObj = GazeManager.Instance.HitObject;
-
-        if( hitObj!= null && hitObj.name == "nobu"){
-            Debug.Log("nog");
+        if (Physics.Raycast(MouseRay, out hit, Mathf.Infinity, LayerMaskOfDoor))  //outでオブジェクトの情報を得る。
+        {
+            Debug.DrawRay(MouseRay.origin, MouseRay.direction, Color.red,100.0f);
             hit.collider.GetComponent<ParentDoor>().Doors();
-        }
 
-       
+        }
     }
 
     public void SpownDoor(){
-
+        doorPos = ManagerSinglton.Instance.doorPos;
         int rand = (int)Random.Range(1, 6);
         switch (rand)
         {
             case 1:
-                Instantiate(Door1Prefab);
+                Instantiate(Door1Prefab,doorPos, Quaternion.identity);
+                //UnChenged = Door1Prefab.transform.position;
                 break;
             case 2:
-                Instantiate(Door2Prefab);
+                Instantiate(Door2Prefab,doorPos, Quaternion.identity);
                 break;
             case 3:
-                Instantiate(Door3Prefab);
+                Instantiate(Door3Prefab,doorPos, Quaternion.identity);
                 break;
             case 4:
-                Instantiate(Door4Prefab);
+                Instantiate(Door4Prefab,doorPos, Quaternion.identity);
                 break;
             case 5:
-                Instantiate(Door5Prefab);
+                Instantiate(Door5Prefab,doorPos, Quaternion.identity);
                 break;
             case 6:
-                Instantiate(Door6Prefab);
+                Instantiate(Door6Prefab,doorPos, Quaternion.identity);
                 break;
         }
         Opend = false;

@@ -6,6 +6,7 @@ public class ManagerSinglton : SingletonMonoBehaviour<ManagerSinglton>
 {
     public int planeNum;
     public NotificationObject<bool> doorExist;
+    public Vector3 doorPos;
 
     public bool once = true;
 
@@ -26,5 +27,6 @@ public class ManagerSinglton : SingletonMonoBehaviour<ManagerSinglton>
 
         planeNum = 0;
         doorExist = new NotificationObject<bool>(false);
+        doorPos = Vector3.zero;
     }
 }
